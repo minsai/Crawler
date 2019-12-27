@@ -11,13 +11,13 @@ for i in range(1,1000,100):
     startnum = str(i)
     url_news = 'https://openapi.naver.com/v1/search/news.json?query=' + keyword + '&display='+ displaynum + '&start='+startnum
     result_news = requests.get(urlparse(url_news).geturl(),
-                      headers = {'X-NAver-Client-Id':'cX2fkCKhbGiMgomkCYbv',
-                                 'X-Naver-Client-Secret':'yjYNiqHCjQ'} )
+                      headers = {'X-NAver-Client-Id':'test',
+                                 'X-Naver-Client-Secret':'test'} )
 
     url_blog = 'https://openapi.naver.com/v1/search/blog?query=' + keyword + '&display=' + displaynum + '&start=' + startnum
     result_blog = requests.get(urlparse(url_blog).geturl(),
-                               headers={'X-NAver-Client-Id': 'cX2fkCKhbGiMgomkCYbv',
-                                        'X-Naver-Client-Secret': 'yjYNiqHCjQ'})
+                               headers={'X-NAver-Client-Id': 'test',
+                                        'X-Naver-Client-Secret': 'test'})
 
     json_news = result_news.json()
     json_blog = result_blog.json()
